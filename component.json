@@ -1,0 +1,13 @@
+{
+  "name": "fan",
+  "repo": "stagas/fan",
+  "version": "0.0.1",
+  "description": "extracts argument names from a function descriptor",
+  "author": "stagas",
+  "keywords": ["function","arguments"],
+  "license": "MIT",
+  "dependencies": {
+    "component/trim": "*"
+  },
+  "scripts": ["index.js"]
+}

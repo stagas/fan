@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>fan</title>
+    <link rel="stylesheet" href="../build/build.css">
+  </head>
+  <body>
+    <script src="../build/build.js"></script>
+    <script>var fan = require('fan')</script>
+    <script>
+      assert('hello-world'==fan(function(hello, world){}).join('-'))
+      assert('hello-world'==fan(function (hello,world) {}).join('-'))
+      assert('hello-world'==fan(function(hello,   world){}).join('-'))
+      assert('hello-world'==fan(function(  hello,  world  ){}).join('-'))
+      assert('hello-world'==fan(function(  hello  ,  world  ){}).join('-'))
+      document.write('all pass')
+      function assert(expr){
+        if (!expr) throw new Error('failed')
+      };
+    </script>
+  </body>
+</html>
